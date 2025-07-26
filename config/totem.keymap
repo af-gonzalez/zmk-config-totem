@@ -77,7 +77,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K       &kp L       &kp RET    
     &kp ESC     &kp Z       &mt LCTRL X &mt LALT C  &mt LGUI V  &kp B           &kp N       &mt RGUI M  &mt LALT COMMA &mt RCTRL DOT  &kp BSPC  &kp TAB
-                                        &mo ESC     &mo NUM     &kp SYM         &lt ARR SPACE  &kp LSHFT   &mo FNC
+                                        &kp ESC     &mo NUM     &mo SYM         &lt ARR SPACE  &kp LSHFT  &mo FNC
                         >;
                 };
 
