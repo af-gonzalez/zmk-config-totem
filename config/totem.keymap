@@ -103,7 +103,7 @@ label= "SYM"                              ;
 
                 &kp EXCL    &kp AT      &kp HASH    &kp AMPS    &kp PRCNT       &kp SLASH   &kp LPAR    &kp RPAR    &kp EQUAL   &kp ASTRK
                 &kp SEMI    &kp COLON   &kp LT      &kp GT      &kp QMARK       &kp MINUS   &kp LBRC    &kp RBRC    &kp SQT     &kp PLUS
-    &trans      &kp NUBS    &kp PIPE    &kp CARET   &kp DLLR    &kp GRAVE       &kp UNDER   &kp LBKT    &kp RBKT    &kp DQT   &trans    &trans      
+    &trans      &kp BSLH    &kp PIPE    &kp CARET   &kp DLLR    &kp GRAVE       &kp UNDER   &kp LBKT    &kp RBKT    &kp DQT   &trans    &trans      
                                         &trans      &trans      &trans          &trans     &trans   &trans      
                         >;
                 };
