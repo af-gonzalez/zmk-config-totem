@@ -15,6 +15,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define BASE 0
 #define SYM  1
@@ -22,7 +23,7 @@
 #define ARR  3
 #define FNC  4
 #define BTH  5
-#define COLEMAK 6
+#define MOUSE 6
 
 
 &mt {
@@ -104,7 +105,7 @@ label= "SYM"                              ;
 
                 &kp EXCL    &kp AT      &kp HASH    &kp AMPS    &kp PRCNT       &kp SLASH   &kp LPAR    &kp RPAR    &kp EQUAL   &kp ASTRK
                 &kp SEMI    &kp COLON   &kp LT      &kp GT      &kp QMARK       &kp MINUS   &kp LBRC    &kp RBRC    &kp SQT     &kp PLUS
-    &trans      &kp PIPE    &kp BSLH    &kp CARET   &kp DLLR    &kp GRAVE       &kp UNDER   &kp LBKT    &kp RBKT    &kp DQT   &trans    &trans      
+    &mo MOUSE   &kp PIPE    &kp BSLH    &kp CARET   &kp DLLR    &kp GRAVE       &kp UNDER   &kp LBKT    &kp RBKT    &kp DQT   &trans    &trans      
                                         &trans      &trans      &trans          &trans     &trans   &trans      
                         >;
                 };
@@ -206,7 +207,7 @@ label= "BTH"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &tog BASE   &tog COLEMAK    &trans      &trans      &bt BT_CLR      &trans      &bt BT_PRV      &bt BT_NXT        &trans          &trans
+                &trans      &trans          &trans      &trans      &bt BT_CLR      &trans      &bt BT_PRV      &bt BT_NXT        &trans          &trans
                 &trans      &trans          &trans      &trans      &trans          &trans      &bt BT_SEL 3    &bt BT_SEL 4      &trans          &trans
     &trans      &trans      &trans          &trans      &trans      &trans          &trans      &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &trans     &trans
                                             &trans      &trans      &trans          &trans      &trans      &trans
@@ -215,26 +216,26 @@ label= "BTH"                               ;
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                colemak_layer {
+                mouse_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "COLEMAK"                           ;
+label= "MOUSE"                             ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃   ┃     J     ┃     L     ┃     U     ┃     Y     ┃     ;     ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃   M UP    ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃     O     ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  M LEFT   ┃  M DOWN   ┃  M RIGHT  ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃    TAB    ┃    SPC    ┃   ┃   ENTER   ┃   BSPC    ┃           ┃
+//                                     ┃           ┃           ┃           ┃   ┃  L CLICK  ┃  R CLICK  ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp RET
-                &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
-    &tog COLEMAK     &kp Z       &mt LCTRL X &mt LALT C  &mt LGUI D  &kp V           &kp K       &mt RGUI H  &mt LALT COMMA &mt RCTRL DOT  &kp BSPC  &kp TAB
-                                        &kp ESC     &mo NUM     &mo SYM         &lt ARR SPACE  &kp LSHFT  &mo FNC
+                &trans      &trans      &trans      &trans      &trans          &trans          &trans          &trans        &trans          &trans
+                &trans      &trans      &trans      &trans      &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans          &trans        &trans          &trans  &trans
+                                        &trans      &trans      &trans          &mkp LCLK       &mkp RCLK       &trans
                         >;
                 };
         };
